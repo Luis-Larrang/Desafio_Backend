@@ -21,7 +21,7 @@ class usuario {
     //Me queda una sola duda para cumplir con el desafio, unir los dos arrays que se me generan en lugar de salir unidos.     
     getBookNames() {
         this.libros.forEach(x => {
-          return console.log([x.nombre])
+          return console.log(x.nombre)
         })
     }             
 }
