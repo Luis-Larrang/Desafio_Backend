@@ -3,39 +3,30 @@ class usuario {
     constructor(nombre , apellido){
         this.nombre = nombre;
         this.apellido = apellido;
-        this.libros = [];
+        //Tengo duda si en libros va como array [] o directo objeto {} para hacer el push.
+        this.libros = {};
         this.mascotas = [];        
-    }
-    /*
- getFullName(){
-     console.log(this.nombre + " " + this.apellido)
- }
+    } 
  addMascota(name){
-     mascotas.push(name)
+     this.mascotas.push(name);
  }
+ //De nuevo aca dependiendo de la respuesta a la duda anterior no se si deberia ponerle los {}.
  addBook(nombre,autor){
-     libros.push([nombre,autor])
+     this.libros.push(nombre,autor);
  }
- countMascotas(){
-     return console.log(mascotas.length)
- }
- getBookNames(){
-     return console.log(libros)
- } */
 }
 
-//let usuario1 = new usuario("Antonela", "Fernandez", addBook(usuario1 ,"El señor de los anillos", "Tolkien"), addMascota(usuario1,"Tiranosaurio"));
-let usuario1 = new usuario("Antonela", "Fernandez", [] , []);
+//Creacion de nuevo usuario pero sin mascotas ni libros
+
+let usuario1 = new usuario("Antonela", "Fernandez");
+
+//Llamado a nombre completo funciona
 
 function getFullName(e){
-    console.log(e.nombre + " " + e.apellido)
+    console.log(e.nombre + " " + e.apellido);
 }
-function addMascota(e , name){
-    e.mascotas.push(name)
-}
-function addBook(e,nombre,autor){
-    e.libros.push([nombre,autor])
-}
+
+//No puedo probar si funcionan porque tengo errores previos.
 function countMascotas(e){
     return console.log(e.mascotas.length)
 }
@@ -43,11 +34,11 @@ function getBookNames(e){
     return console.log(e.libros)
 } 
 
-/*
-//FUNCIONA PERO SIN CLASS
+/*FUNCIONA PERO SIN CLASS
+
 const nombre = "Antonela";
 const apellido = "Fernandez";
-const libros = [];
+const libros = {};
 const mascotas = []; 
 
 function getFullName(){
@@ -57,7 +48,7 @@ function addMascota(name){
     mascotas.push(name)
 }
 function addBook(nombre,autor){
-    libros.push([nombre,autor])
+    libros.push(nombre,autor)
 }
 function countMascotas(){
     return console.log(mascotas.length)
@@ -66,10 +57,14 @@ function getBookNames(){
     return console.log(libros)
 } 
 */
+
+//Llamado funciona.
 getFullName(usuario1);
-//addMascota(usuario1,"Tiranosaurio");
-//addMascota(usuario1,"Lechuza");
-//addBook(usuario1,"El señor de los anillos", "Tolkien");
-countMascotas();
-getBookNames();
+
+//Me dice que addMascota no esta definido, intente poner usuario.addMascota pero tampoco. Lo mismo pasa con addBook()
+addMascota("Tiranosaurio");
+addBook("El señor de los anillos", "Tolkien");
+//Aca me surge la duda de si debo poner usuario u otra cosa.
+countMascotas(usuario);
+getBookNames(usuario);
 
