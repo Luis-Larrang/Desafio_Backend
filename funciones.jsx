@@ -1,9 +1,8 @@
-//CUANDO INTETNO USAR CLASS ME DICE QUE NO ES FUNCION O NO RECONOCE LOS PARAMETROS.
 class usuario {
     constructor(nombre , apellido){
         this.nombre = nombre;
         this.apellido = apellido;
-        //Tengo duda si en libros va como array [] o directo objeto {} para hacer el push.
+        //Tengo duda si en libros va como array [] o directo objeto {}, para hacer el push entiendo que necesito que sea un array con objetos adentro no?
         this.libros = [];
         this.mascotas = [];        
     }
@@ -13,17 +12,18 @@ class usuario {
     addMascota(name){
         this.mascotas.push(name);
     }
- //De nuevo aca dependiendo de la respuesta a la duda anterior no se si deberia ponerle los {}.
+    //De nuevo aca dependiendo de la respuesta a la duda anterior no se si deberia ponerle los {}.
     addBook(nombre,autor){
         this.libros.push({nombre,autor});
     }
     countMascotas(){
     return console.log(this.mascotas.length)
-    }
-    //Me falta nomas hacer que solamente me diga el nombre del libro en lugar de todo el array
-    getBookNames(){
-        return console.log(this.libros)
-    } 
+    }    
+    getBookNames() {
+        this.libros.forEach(x => {
+          console.log(`${x.nombre}`)
+        })
+      }    
 }
 
 //Creacion de nuevo usuario pero sin mascotas ni libros
