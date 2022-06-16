@@ -1,5 +1,5 @@
 //Clase constructora de usuario:
-class usuario {
+class Usuario {
     constructor(nombre , apellido, libros , mascotas){
         this.nombre = nombre;
         this.apellido = apellido;        
@@ -27,9 +27,9 @@ class usuario {
 }
 
 //Carga de nuevo usuario:
-let usuario1 = new usuario("Antonela", "Fernandez",({nombre:"Jupiter", autor:"Bart"}),"Ganzo");
+let usuario1 = new Usuario("Antonela", "Fernandez",({nombre:"Jupiter", autor:"Bart"}),"Ganzo");
 
-let usuario2 = new usuario("Paula", "Florez",({nombre:"Batman", autor:"Alf"}),"Gato");
+let usuario2 = new Usuario("Paula", "Florez",({nombre:"Batman", autor:"Alf"}),"Gato");
 
 //Llamado a las funciones:
 usuario1.getFullName();
