@@ -1,5 +1,4 @@
 //Clase constructora de usuario:
-//Si no le pongo [] a libros y mascotas el metodo push no funciona y no con que reemplazarlo.
 class usuario {
     constructor(nombre , apellido, libros , mascotas){
         this.nombre = nombre;
@@ -15,27 +14,21 @@ class usuario {
     }    
     addBook(nombre,autor){
         this.libros.push({nombre,autor});
-    }
-    //Por algun motivo me cuenta una mascota de mas, como si ya tuviera la posicion [0] ocupada si no le cargo una mascota en new user.
+    }    
     countMascotas(){       
     return console.log(this.mascotas.length)
     }
-    //Cuando modifique el constructor me dejo de reconocer el x.nombre y no se bien porque.     
-    /*getBookNames() {
-        this.libros.forEach(x => {
-          return console.log(x.nombre)
-        })
-    }*/   
-    //Si solo llamo a this.libros me sale el objeto completo, por lo que la informacion se esta cargando correctamente creo.
     getBookNames(){
-        console.log(this.libros);
+        const librosNombre = this.libros.map((libro)=>{
+            return libro.nombre
+        })
+        console.log(librosNombre);
     }          
 }
 
 //Carga de nuevo usuario:
-let usuario1 = new usuario("Antonela", "Fernandez");
+let usuario1 = new usuario("Antonela", "Fernandez",({nombre:"Jupiter", autor:"Bart"}),"Ganzo");
 
-//Siento que es muy rebuscado y tiene que haber una manera mas simple de cargar esos datos.
 let usuario2 = new usuario("Paula", "Florez",({nombre:"Batman", autor:"Alf"}),"Gato");
 
 //Llamado a las funciones:
