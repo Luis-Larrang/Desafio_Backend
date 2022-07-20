@@ -1,0 +1,37 @@
+[
+  {
+    "nombre": "Mollejas1",
+    "precio": 2000,
+    "categoria": "Achuras",
+    "descripcion": "Mollejas premium",
+    "id": 1
+  },
+  {
+    "nombre": "Mollejas1",
+    "precio": 2000,
+    "categoria": "Achuras",
+    "descripcion": "Mollejas premium",
+    "id": 2
+  },
+  {
+    "nombre": "Mollejas1",
+    "precio": 2000,
+    "categoria": "Achuras",
+    "descripcion": "Mollejas premium",
+    "id": 4
+  },
+  {
+    "nombre": "Mollejas1",
+    "precio": 2000,
+    "categoria": "Achuras",
+    "descripcion": "Mollejas premium",
+    "id": 5
+  },
+  {
+    "nombre": "Mollejas1",
+    "precio": 2000,
+    "categoria": "Achuras",
+    "descripcion": "Mollejas premium",
+    "id": 6
+  }
+]
