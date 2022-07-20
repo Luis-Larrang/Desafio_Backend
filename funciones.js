@@ -16,7 +16,7 @@ class Usuario {
         this.libros.push({nombre,autor});
     }    
     countMascotas(){       
-    return console.log(this.mascotas.length)
+    return this.mascotas.length
     }
     getBookNames(){
         const librosNombre = this.libros.map((libro)=>{

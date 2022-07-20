@@ -33,5 +33,26 @@
     "categoria": "Achuras",
     "descripcion": "Mollejas premium",
     "id": 6
+  },
+  {
+    "nombre": "Mollejas1",
+    "precio": 2000,
+    "categoria": "Achuras",
+    "descripcion": "Mollejas premium",
+    "id": 7
+  },
+  {
+    "nombre": "Mollejas1",
+    "precio": 2000,
+    "categoria": "Achuras",
+    "descripcion": "Mollejas premium",
+    "id": 8
+  },
+  {
+    "nombre": "Mollejas1",
+    "precio": 2000,
+    "categoria": "Achuras",
+    "descripcion": "Mollejas premium",
+    "id": 9
   }
 ]
