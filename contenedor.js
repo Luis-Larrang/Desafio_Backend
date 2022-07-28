@@ -44,7 +44,7 @@ class Contenedor{
                 let dataArchivo = await fs.promises.readFile(this.ruta, "utf8");
                 let dataArchivoParseado = JSON.parse(dataArchivo);
                 if (dataArchivoParseado.length) {
-                    console.log(dataArchivoParseado);
+                    //console.log(dataArchivoParseado);
                     return dataArchivoParseado;                    
                 } else {
                     console.log("No hay productos");

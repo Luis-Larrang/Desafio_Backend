@@ -1,0 +1,23 @@
+[
+  {
+    "nombre": "Mollejas",
+    "precio": 2000,
+    "categoria": "Achuras",
+    "descripcion": "Mollejas premium",
+    "id": 1
+  },  
+  {
+    "nombre": "Vacio",
+    "precio": 1200,
+    "categoria": "Carnes",
+    "descripcion": "Vacio premium",
+    "id": 3
+  },
+  {
+    "nombre": "Pollo",
+    "precio": 800,
+    "categoria": "Aves",
+    "descripcion": "Pechuga premium",
+    "id": 4
+  }
+]
