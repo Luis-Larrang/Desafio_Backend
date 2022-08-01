@@ -89,6 +89,18 @@ class Contenedor{
         }
         
     }
+
+    //Random
+    async randomItem(){
+        try {
+            let dataArchivo = await fs.promises.readFile(this.ruta, "utf8");
+            let dataArchivoParseado = JSON.parse(dataArchivo);
+            let itemRandom = dataArchivoParseado[Math.floor(Math.random()*dataArchivoParseado.length)];
+            return itemRandom;
+        } catch (error) {
+            console.log(error);
+        }
+    }
 }
 
 module.exports= Contenedor;

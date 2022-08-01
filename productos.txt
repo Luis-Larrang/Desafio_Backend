@@ -11,13 +11,13 @@
     "precio": 1200,
     "categoria": "Carnes",
     "descripcion": "Vacio premium",
-    "id": 3
+    "id": 2
   },
   {
     "nombre": "Pollo",
     "precio": 800,
     "categoria": "Aves",
     "descripcion": "Pechuga premium",
-    "id": 4
+    "id": 3
   }
 ]

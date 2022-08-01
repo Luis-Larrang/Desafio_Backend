@@ -3,21 +3,41 @@ const Contenedor = require("./contenedor.js");
 const contenedor = new Contenedor("./productos.txt");
 
 const app = express()
+const PORT = process.env.PORT || 8080
 
-//Se me habia hecho un desastre de cosas que fui probando a ver si me salia, pero borre todo y deje lo minimo.
+app.use(express.json())
 
-app.get("/productos", (req , res) => {            
-    res.send(`${contenedor.getAll()}`)       
+//Dejo distintos metodos de hacer lo mismo conectado para tener as diferentes opciones a la vista.
+
+app.get("/productos", async (req , res) => { 
+    try {
+        const productList = await contenedor.getAll(); 
+        //res.send(productList)
+        res.json({
+            productList
+        })  
+    } catch (error) {
+        console.log(error);
+    }      
 })
 
-app.get("/productoRandom", (req , res) => {    
-    res.send(`Este seria el producto random`)       
+app.get("/productoRandom", async (req , res) => {
+    try {        
+        const productoRandom = await contenedor.randomItem();   
+        res.send(productoRandom) 
+        /*res.json({
+            productoRandom
+        })*/ 
+    } catch (error) {
+        console.log(error);
+    }         
 })
 
-const PORT = 8080;
 const server = app.listen(PORT, () => {    
     console.log(`Escuchando el puerto ${server.address().port}`);    
 })
 
 server.on("error", err => console.log(err))
+
+
 
