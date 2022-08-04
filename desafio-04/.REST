@@ -1,0 +1,12 @@
+PUT http://localhost:8080/api/productos/2 HTTP/1.1
+
+Content-Type: application/json
+
+    {
+        "nombre":"batata",
+        "precio":30000,
+        "thumbnail":"nnnnnnnn",
+        "id":33
+    }
+
+//CUANDO LE DOY SEND REQUEST LO UNICO QUE HACE ES BORRAR EL OBJETO QUE LE PASO Y DEJAR SOLO EL ID

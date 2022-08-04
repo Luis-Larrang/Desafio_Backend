@@ -1,0 +1,26 @@
+[
+  {
+    "nombre": "Mollejas",
+    "precio": 2000,
+    "thumbnail": "Achuras",
+    "id": 1
+  },
+  {
+    "nombre": "Vacio",
+    "precio": 1200,
+    "thumbnail": "Carnes",
+    "id": 2
+  },
+  {
+    "nombre": "Pollo",
+    "precio": 800,
+    "thumbnail": "Aves",
+    "id": 3
+  },
+  {
+    "nombre": "banana",
+    "precio": "12333",
+    "thumbnail": "aklsjdha",
+    "id": 4
+  }
+]
