@@ -31,9 +31,11 @@ class Contenedor{
     async actualizarPorId(obj){
         try {            
             let dataArchivo = await this.#readFileFunction(this.ruta);
-            const objIndex = dataArchivo.findIndex(prod => prod.id === obj.id);           
+            const objIndex = dataArchivo.findIndex(prod => prod.id === parseInt(obj.id)); 
+            console.log(objIndex);          
             if (objIndex !== -1) {
-                dataArchivo[objIndex] = obj
+                dataArchivo[objIndex] = parseInt(obj)
+                console.log(obj);
                 await fs.promises.writeFile(this.ruta, JSON.stringify(dataArchivo, null, 2))
                 return {msg:`actualizado el producto`}
             } else {

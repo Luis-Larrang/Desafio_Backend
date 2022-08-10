@@ -6,9 +6,9 @@
     "id": 1
   },
   {
-    "nombre": "Vacio",
-    "precio": 1200,
-    "thumbnail": "Carnes",
+    "nombre": "atun",
+    "precio": 800,
+    "thumbnail": "Pescaderia",
     "id": 2
   },
   {
