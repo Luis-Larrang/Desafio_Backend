@@ -9,11 +9,12 @@ const arrayProductos =[]
 
 app.use(express.static("public"));
 app.use(express.urlencoded({extended:true}));
-app.use("/api/productos", routerProductos);
 app.use(express.json())
+app.use("/api/productos", routerProductos);
 
 routerProductos.post("/",  (req, res) => {
-    const objProducto = req.body;    
+    const objProducto = req.body; 
+    console.log(objProducto);   
     contenedor.save(objProducto);
     res.json({
         objProducto
@@ -23,10 +24,8 @@ routerProductos.post("/",  (req, res) => {
 routerProductos.put("/:id", async (req, res)=>{
     try {
         const {id} = req.params;        
-        const objProducto = req.body;
-        const { nombre, precio, thumbnail } = req.body        
-        contenedor.actualizarPorId({id: parseInt(id), ...objProducto})       
-        const respuesta = await contenedor.actualizarPorId({nombre, precio, thumbnail});
+        const objProducto = req.body;                     
+        const respuesta = await contenedor.actualizarPorId({id: parseInt(id), ...objProducto});        
         res.json({respuesta})
     } catch (error) {
         console.log(error);
@@ -59,6 +58,3 @@ routerProductos.get("/:id", async (req , res) => {
 const server = app.listen(PORT, () => {    
     console.log(`Escuchando el puerto ${server.address().port}`);    
 })
-
-
-/*Hola Luis, gracias por entregar el desafio. Vi varias cosas, primero tenes que hacer destructuring en req.body const { nombre, precio, thumbnail } = req.body; luego la funcion deberia ser asincronica, unas async await async(req,res  y const respuesta = await contenedor.actualizarPorId.....   la instancia de contenedor hacela afuera de las rutas, no hace falta repetirla. Fija esas esa cosas y me vas diciendo. */

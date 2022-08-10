@@ -22,5 +22,17 @@
     "precio": "12333",
     "thumbnail": "aklsjdha",
     "id": 4
+  },
+  {
+    "nombre": "anana",
+    "precio": "123445",
+    "thumbnail": "dsagfsgsag",
+    "id": 5
+  },
+  {
+    "nombre": "afdsaf",
+    "precio": "3242",
+    "thumbnail": "sdafdsafdsfg",
+    "id": 6
   }
 ]
